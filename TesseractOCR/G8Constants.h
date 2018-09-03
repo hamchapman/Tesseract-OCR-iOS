@@ -79,22 +79,22 @@ typedef NS_ENUM(NSUInteger, G8PageSegmentationMode){
 };
 
 /**
- * When Tesseract/Cube is initialized we can choose to instantiate/load/run
- * only the Tesseract part, only the Cube part or both along with the combiner.
+ * When Tesseract/LSTM is initialized we can choose to instantiate/load/run
+ * only the Tesseract part, only the LSTM part or both along with the combiner.
  */
 typedef NS_ENUM(NSUInteger, G8OCREngineMode){
     /**
-     *  Run Tesseract only - fastest
+     *  Run Tesseract only - fastest (deprecated)
      */
-    G8OCREngineModeTesseractOnly,
+    G8OCREngineModeTesseractOnly __attribute__((deprecated)),
     /**
-     *  Run Cube only - better accuracy, but slower
+     *  Run LSTM only - better accuracy, but slower
      */
-    G8OCREngineModeCubeOnly,
+    G8OCREngineModeLSTMOnly,
     /**
-     *  Run both and combine results - best accuracy
+     *  Run both and combine results - best accuracy (deprecated)
      */
-    G8OCREngineModeTesseractCubeCombined,
+    G8OCREngineModeTesseractLSTMCombined __attribute__((deprecated)),
 //    G8OCREngineModeDefault,
 };
 
